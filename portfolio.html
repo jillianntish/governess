@@ -23,10 +23,11 @@
                 
                 /*navigation menu*/
             nav {
-                background:rgb(160, 180, 137);
-                margin: 0 auto;
+                background:rgb(96, 109, 81);
+                margin: 10px;
                 display: flex;
                 padding: 10px;
+                border-radius: 8px;
             }
             nav header {
                 display: flex;
@@ -39,62 +40,60 @@
             }
             nav li {
                 display: inline-block;
-                padding: 0 10px;
+                padding: 8px;
+                border: 1px dashed;
             }
             nav a {
                 text-decoration: none;
-                color: rgb(96, 109, 81);
+                color: rgb(255, 255, 255);
             }
                 
             /* main container area beneath menu*/
             main {
                 background: rgb(96, 109, 81);
                 display: flex;
-                border-radius: 10px;
+                border-radius: 8px;
             }
             .content {
                 flex: 1;
-                padding: 15px;
+                padding: 10px;
             }
             
             /* portfolio styles */
             #portfolio {
-                color: rgb(96, 109, 81);
+                color: rgb(255, 255, 255);
                 list-style-type: none;
                 padding-left: 0;
             }
             
             #portfolio li {
                 background: rgb(160, 180, 137);
-                padding: 10px;
-                border-radius: 10px;
-                margin-bottom: 10px;
+                padding: 8px;
+                border-radius: 50px;
+                margin-bottom: auto;
             }
             
             #portfolio li:hover {
-                background: #eee;
+                background: rgb(161, 209, 137);
             }
             
             #portfolio a {
                 text-decoration: none;
-                color: rgb(96, 109, 81);
+                color: rgb(255, 255, 255);
             }
             
             </style>
-            
-            
     </head>
-
 
 
     <body>
         <div id="all-contents">
             <nav>
-                <header>Jill of All</header>
+                <header>Jill Poole</header>
                 <ul>
                     <li><a href="index.html">Home</a>
                     </li>
-                    <li><a href="portfolio.html"></a>
+                    <li><a href="portfolio.html">Portfolio</a>
                     </li>
                 </ul>
             </nav>
@@ -104,21 +103,27 @@
                     <ul id="portfolio">
                         <p>
                             <section class="interests">
-                                <header>Interests</header>
+                                <header>Interests</header><br>
+                                
                                 <ul>
-                                    <li>Tropicals</li>
-                                    <li>Succulents</li>
-                                    <li>Cacti</li>
+                                    <li>Bartending</li><br>
+                                    <li>Gardening</li><br>
+                                    <li>Coding</li>
                                 </ul>
                             </section>
-                    </p>
+                        </p>
                     </ul>
-                <div class="sidebar">
-                    
-                    <img src ="https://ui.uncc.edu/sites/default/files/styles/w700/public/photos/WEB_GrissomGarden1.jpg?itok=fkSOfkDY">
                 </div>
-                </div>
-            </main>
+<div class="sidebar">
+    <style>
+        img {
+             border-radius: 8px;
+            }
+    </style>
+         <img src ="https://ui.uncc.edu/sites/default/files/styles/w700/public/photos/WEB_GrissomGarden1.jpg?itok=fkSOfkDY" alt = "Banana Leaves" style="width:400px;height:300px">
+         
+</div>
+</main>
             
             
             
