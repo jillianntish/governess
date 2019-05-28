@@ -5,13 +5,18 @@
 /**
  * IN CLASS EXERCISE: stringy.js
  */
-
+            /*This lesson is about using Array Methods to alter strings and return
+            a new value*/
 /**
- * Given an input String, return its length.
+ * Youre Given an input that is a String. for this function, return its length.
  *
  * TIP: In JavaScript, how can we decipher the length of a String?
  * work?
  */
+ 
+ //String is the parameter we are given, it is just a placeholder
+ 
+ 
 function length(string) {
     // YOUR CODE BELOW HERE //
     return string.length;
@@ -33,15 +38,16 @@ function toLowerCase(string) {
  * Given an input String, return a new String forced to uppercase.
  */
 function toUpperCase(string) {
-    // YOUR CODE BELOW HERE //
     return string.toUpperCase();
-
-    // YOUR CODE ABOVE HERE //
 }
 
 /**
- * Given an input String, return a new String forced to dash-case.
- *
+ * Given an input String,
+ * 
+ * return a new String forced to dash-case.
+  // join method
+ 
+ 
  * Examples:
  *
  *      toDashCase('Hello World'); // => 'hello-world'
@@ -53,13 +59,10 @@ function toUpperCase(string) {
  *      See: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace#Using_global_and_ignore_with_replace()
  */
 function toDashCase(string) {
-    // YOUR CODE BELOW HERE //
-    
     return string.split(" ").join("-").toLowerCase();
-    
-    // YOUR CODE ABOVE HERE //
+    //have to split the characters with a space to rejoin them back together with a hyphen
+    // use method to also change the new hyphen joined letters to lowercase
 }
-
 /**
  * Given an input String and a single character, return true if the String
  * begins with the character, false otherwise. The Function is case insensitive.
@@ -115,14 +118,15 @@ function endsWith(string, char) {
 }
 
 /**
- * Given two input Strings, return the Strings concatenated into one.
+ * Given two input Strings, 
+ * 
+ * return the Strings concatenated into one.
  *
  * TIP: What's the operator to concatenate two Strings?
  */
 function concat(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-    var ans = stringOne + stringTwo;
-    return ans;
+    return stringOne + stringTwo;
     // YOUR CODE ABOVE HERE //
 }
 
@@ -136,11 +140,9 @@ function concat(stringOne, stringTwo) {
  * TIP: This Function pulls out all the arguments passed to it and stores them
  *      in an Array called args.
  */
-function join(stringOne, stringTwo) {
+function join(stringOne, stringTwo, stringThree, stringFour ) {
     // YOUR CODE BELOW HERE //
-  var args = Array.from();
-    args.join();
-
+    return stringOne + stringTwo + stringThree + stringFour; 
     // YOUR CODE ABOVE HERE //
 }
 
@@ -167,35 +169,53 @@ function longest(stringOne, stringTwo) {
 
 /**
  * Given two Strings, return 1 if the first is higher in alphabetical order than
- * the second, return -1 if the second is higher in alphabetical order than the
- * first, and return 0 if they're equal.
+ 
+ * the second, 
+ * 
+ * return -1 if the second is higher in alphabetical order than the
+ * first, 
+ * 
+ * and return 0 if they're equal.
  *
  * TIP: How can we compare Strings? Is 'a' greater than or less than 'b'?
  */
+ 
+ 
 function sortAscending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-    var ssOne = stringOne.length;
-    var ssTwo = stringTwo.length;
-if (ssOne > ssTwo){
+   if (stringOne < stringTwo){
     return 1;
-} else if (ssOne < ssTwo){
-    return -1; 
-} else (ssOne === ssTwo);
+   } else if (stringOne > stringTwo){
+    return -1;
+   } else {
     return 0;
+   }
     // YOUR CODE ABOVE HERE //
 }
 
 
 /**
- * Given two Strings, return 1 if the first is lower in alphabetical order than
- * the second, return -1 if the second is lower in alphabetical order than the
- * first, and return 0 if they're equal.
+ * Given two Strings, 
+ * 
+ * return 1 if the first is lower in alphabetical order than
+ * the second, 
+ * 
+ * return -1 if the second is lower in alphabetical order than the
+ * first, 
+ * 
+ * and return 0 if they're equal.
  *
  * TIP: How can we compare Strings? Is 'a' greater than or less than 'b'?
  */
 function sortDescending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
+ if (stringOne > stringTwo){
+    return 1;
+   } else if (stringOne < stringTwo){
+    return -1;
+   } else {
+    return 0;
+   }
 
 
 

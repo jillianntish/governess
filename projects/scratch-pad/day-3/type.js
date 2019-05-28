@@ -14,9 +14,11 @@
  */
 function isArray(value) {
     // YOUR CODE BELOW HERE //
-    
-    
-    
+    if (Array.isArray(value)){
+    return true;
+    } else {
+        return false;
+    }
     
     // YOUR CODE ABOVE HERE //
 }
@@ -31,9 +33,7 @@ function isArray(value) {
  */
 function isObject(value) {
     // YOUR CODE BELOW HERE //
-    
-    
-    
+  return (Object.prototype.toString.call(value)) === '[object Object]';
     
     // YOUR CODE ABOVE HERE //
 }
@@ -46,9 +46,11 @@ function isObject(value) {
  */
 function isCollection(value) {
     // YOUR CODE BELOW HERE //
-    
-    
-    
+ if(Array.isArray(value) === true || isObject(value) === true){
+     return true; 
+ } else {
+    return false;
+ }
     
     // YOUR CODE ABOVE HERE //
 }
@@ -58,14 +60,14 @@ function isCollection(value) {
  * 
  * Types are one of: 
  *    - "string"
- *    - "array"
- *    - "object"
- *    - "undefined"
- *    - "number"
+ *    - "array"   -> Array.isArray()
+ *    - "object"   ->Object.prototype.toString.call()
+ *    - "undefined" typeOf()
+ *    - "number"    -> Object.prototype.toString.call()
  *    - "boolean"
- *    - "null"
+ *    - "null"     -> Object.prototype.toString.call()
  *    - "function"
- *    - "date"
+ *    - "date"     -> Object.prototype.toString.call() / value instanceOf Date()
  * 
  * Examples:
  *    typeOf(134) -> "number"
@@ -74,10 +76,20 @@ function isCollection(value) {
  */ 
 function typeOf(value) {
     // YOUR CODE BELOW HERE //
-    
-    
-    
-    
+if (Array.isArray(value)){
+    return 'array';
+} else if (value === null){
+    return 'null';
+} else if (typeof value === undefined){
+    return 'undefined';
+} else if (value instanceof Date){
+    return "date";
+} else if (typeof value === 'object'){
+    return 'object';
+} else  {
+    return typeof value;
+} 
+
     // YOUR CODE ABOVE HERE //
 }
 

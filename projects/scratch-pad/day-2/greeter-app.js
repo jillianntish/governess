@@ -26,8 +26,12 @@
  *      can be used to test that the hour is within the morning threshold. 
  *      It's best to be consistant and use the SAME type of comparison for 
  *      each threshold. 
+ 
+  // 1200
  *   
  *   b. Does the last threshold even need an else-if?
+ * 
+  //no, just an else and a return statement
  * 
  *   c. The tests are CASE sensitive, so you MUST console.log('Good Night!') with
  *      the exact case.
@@ -35,8 +39,15 @@
 
 function greeter(hour) {
     // YOUR CODE BELOW HERE //
-    
-    
+    if (hour >= 0 && hour <= 11){
+        console.log('Good Morning!');
+        } else if (hour >= 12 && hour <= 16){
+        console.log('Good Afternoon!');
+        } else if (hour >= 17 && hour <= 21){
+        console.log('Good Evening!');
+        } else {
+        console.log('Good Night!');
+        }
     
     
     // YOUR CODE ABOVE HERE //
