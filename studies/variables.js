@@ -1,5 +1,16 @@
 /*
- * VARIABLES:
+ *
+ *
+ *
+ *
+ *
+ *******************************************************************************
+ *                                VARIABLES                                    *
+ *******************************************************************************
+ *
+ *
+ * 
+ *
  * 
  * Houses are built of materials, either brick, wood, cement..etc.
  *  
@@ -18,16 +29,16 @@
  * 0.                             Declare Dat
  * Building a program is like building a house. Imagine how excited you would be
  * to build a house from scratch, I know I would "declare" it to everyone, most
- * importantly, my Contractor, or my COnsole who's really doing all the work for
+ * importantly, my Contractor-Console who's really doing all the work for
  * me!
  */
-                        var houseMaterial;
+                                var houseMaterial;
  
- /* I just told my computer I want it to declare (build) something and call it
- *  * "houseMaterial".
- *  * the word "houseMaterial" looks like that because it is written in "Camel
- *  * Case" which is what I could call "JavaScript's Handwriting"*/
- /*
+ /* I just told my Contractor-Console I want it to declare (build) something and
+ *  call it "houseMaterial". The word "houseMaterial" looks like that because 
+ *  it is written in "Camel Case" which is what I could call "JavaScript's 
+ *  Handwriting".
+ *
  * In programming, Variables are the abstract "Materials" that are made up of
  * Data types. So again, if I were building a House (or a Program), I would use 
  * materials (Variables) to construct my house, but what actual type of 
@@ -39,17 +50,18 @@
  *
  *
  * 1.                        Assign Dat
- * /* i.e. my Console is a contractor, her Variables are her employees, and 
+ * /* i.e. I have Console-contractor, her Variables are her employees, and 
  * they all have assignments to complete!*/
  /*
- * In programming, the '=' is called an "Assignment Operator", the COnsole tells
- * the Assignment Operator what she wants my Data to be to make up the Variable
+ * In programming, the '=' is called an "Assignment Operator", I work with my 
+ * Contractor-Console who pulls up the the Assignment Operator, and then the Assignment
+ * Operator assigns my data to a variable with the '=' sign. 
  * In this example, The Assignment Operator is telling my computer 
  * 'What base materials should I use for this project?'
  * AKA Now that I've decided I'm going to build a house, what should I use to 
  * build it?
  */
-                        var houseMaterial;
+                             var houseMaterial;
 
  /* These smaller materials can exist (Declared) on their own, but don't 
  * actually "do" anything or serve much purpose in that state, based on what I 
@@ -103,21 +115,30 @@
                     // I love saying the word Boolean:)
       
         
-  /* Sometimes I will want to check in with my contractor to make sure things in
+  /* Sometimes I will want to check in with my Console-Contractor to make sure things in
   * my house are being built the way I want them to, I can check in to make sure
-  * things are running smoothing by logging the work She's done already and 
-  * making sure things are where I want them.
+  * things are running smoothing by logging the work that's been done already and 
+  * making sure things are where I want them. That's when console log comes in handy.
   *
   */
                             console.log(myHouseIs);
- /* 
+ /*
  *
  * 2.                       Hoisting / Var, Let, & Const
  *   A. Now, I've talked about defining with Var, and how when you define a variable
- * using Var, it's becomes a Global Variable, which means I  can access it's 
- * value anywhere in the program. Var variables are "Hoisted" 
- * to the top of a program upon initialization. This means my COnsole takes a
- * look at all of my variables in my program(Contractor looking over blueprints)
+ * using the keyword 'var', it is function scoped. If "var" variables are declared
+ * outside of a function, they become Global variables, which means they are hoisted
+ * to the top of the program at initializion, and are accessible anywhere in the program. 
+ * Var variables that are declared inside of a function are scoped to that function
+ * and will be raised to the top of the function.
+ * 
+ * To reiterate: If 'var' variables are not in a function they will be hoisted 
+ * to the top of the program. If they are declared within a function they will be
+ * hoisted to the top of their function.
+
+ * 
+ * This means my Console takes a
+ * look at all of my variables in my program(like a contractor presenting blueprints)
  * and has everything established even before my variables get to work doing the
  * jobs my Assignment Operator has given them.
  * 
@@ -138,7 +159,7 @@
                      
                     var hoistMyHouse = "We have liftoff!";
             
-                    console.log(hoistMyHouse);
+                          console.log(hoistMyHouse);
                     //prints "We Have liftoff!" to the console
                     
  /* C . I'm super specific though, so sometimes I only want certain materials used in 
@@ -154,7 +175,7 @@
                      function letThe(sunshineIn) {
             let houseWindows = 'glass'; //this is called a "Code Block"
                         } 
-                console.log(houseWindows); // ERRRRRRRRRRRRRR
+                // console.log(houseWindows); //-> ERRRRRRRRRRRRRR
  
  /* D. Because I have defined my let Variable "houseWindows" within the Local block
  * scope of my function 'letThe', it can ONLY be used INSIDE this
@@ -171,26 +192,26 @@
  * things will NEVER change, so these things are CONSTANT
  */
                         const insulation = false;
-                          var insulation = false; 
-                 // nope! This will cause a reference error
+                        // var insulation = false; 
+                 //nope! This will cause a reference error
                               
             /* the Constant variable insulation cannot be assigned to the
             global variable Var once it has been declared, we can change
             it's value though so thats cool*/
  
  
-                            const insulation = false;
-                                  insulation = true; 
-            // This only works in code, there is no insulation in New Orleans!
+/*                          const insulation = false;
+                              insulation = true;
+          //-> returns an error message that const has already been assigned 
             
             
-   const /* like */ let /*, is also a block variable avaible only in its local 
+   const /* like */ /*let /*, is also a block variable avaible only in its local 
    scope, it is NOT hoisted at the start of a program!
   */
-                            console.log(myHood);
+                            // console.log(myHood);
         //At this point, the program stops because const has not been defined!
                             
-                            const myHood = 'Treme'
+                            const myHood = 'Treme';
                             console.log(myHood);
                         //prints 'Treme' to the console
   
@@ -210,7 +231,7 @@
         variables are const or let, they are only available to referenced in the
         confines of their Local Scope! */
      
-           var myHouseIs =  "Can I Live In" + " " + myHood + "?" affirmative;
+        var myHouseIs =  "Can I Live In" + " " + myHood + "?" + affirmative;
         /*I can even "concatenate" (add) my variables together to create new 
         Strings!*/
         //prints to the console Can I Live In Treme? Yes I Can!
@@ -235,7 +256,7 @@
  * "word" or a sequence of characters and letters, a number, or a boolean value,
  * which is a fun way to say if something is true or false
  *
- *  3. To create a variable we use the keyword var, or let, or const followed by a 
+ *      3. To create a variable we use the keyword var, or let, or const followed by a 
  * name for our material. For instance, I think I'm going to use brick to start
  * my house, so if I want it to be available for many different projects around 
  * my house and maybe even INSIDE my house somewhere, I'm going to use the

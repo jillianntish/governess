@@ -2,9 +2,10 @@
 *
 *
 *
-***************************************************************************
-*                               DATA TYPES                                *
-***************************************************************************
+********************************************************************************
+*                               DATA TYPES                                     *
+********************************************************************************
+*
 *
 *
 *
@@ -30,20 +31,16 @@
 /*
 *
 *
-*
-*
-*
-*
 * 1. Strings
 *
 *   "Simple Data Type"
 *
-*   Strings are a primitive(simple) data type that is a collection of characters or symbols, 
+*   Strings are a primitive (simple) data type that is a collection of characters or symbols, 
 *   surrounded by quotes. We can also combine string defined variables to form new 
 *   strings by using "+", this is called "Concatenation".
 */
                         var thisString = "Jill";
-                        var thatString = "Poole"
+                        var thatString = "Poole";
                         var myString = thisString + thatString;
                         console.log(myString);
                         
@@ -51,11 +48,10 @@
 *   of string and should also be enclosed in quotes or as part of another to be
 *   printed.
 */    
-                        var thisString = "Jill";
-                        var thatString = "Poole"
-                        var myString = thisString + " " + thatString + ".";
+                    
+                var myString = thisString + " " + thatString + ".";
                         console.log(myString);
-                    // -> Jill Poole properly concatenated
+                    // -> Jill Poole. properly concatenated
 /*  We have access to the individual characters in a string by using something
 *   called "bracket notation".
 */
@@ -67,9 +63,6 @@
 /*                        
 *  We can access the final character in a string by using the length property
 *  ".length -1"
-*
-*
-*
 *
 *
 *
@@ -96,12 +89,8 @@
                         
                     } testBool(); 
 /*   We get the result of our function by "calling" its name outside the last
-     curly brace, we call the function by using it's name with [or without]
-     [arguments in] parenthesis */
-/*
-*
-*
-*
+*    curly brace, we call the function by using it's name with [or without]
+*    [arguments in] parenthesis 
 *
 *
 *
@@ -112,8 +101,9 @@
 *    Arrays are Complex Data types used to store other data types. 
 *    They are indexed lists that begin at zero(0).
 *    They have a variety of methods and property reference methods. We can 
-*    create empty arrays and add in values later using these methods, we can 
-*    access specific "elements" in an array by using bracket and dot notation.*/
+*    create empty arrays and add in values later using methods, we can 
+*    access specific "elements" in an array by using bracket and dot notation.
+*/
 
                     var myFirstArray = []; 
 /*  This is an array Literal, an array that has been "literally" created, but
@@ -124,7 +114,7 @@
 *   my array. I can even add other Objects or arrays to my array.
 *    
 *
-*                      Bracket Notation
+*                  ******     Bracket Notation     ******
 *
 *
 *   To access the VALUE at any index position, use bracket notation.
@@ -137,18 +127,18 @@
 *   final vaue in any array, the property ".length-1" 
 *
 */
-            console.log(myFirstArray[myFirstArray.length-1]);
-              // -> prints [] to the console, bc its an array literal
+            console.log(myFirstArray[myFirstArray.length - 1]);
+                     // -> prints [] to the consolel 
 /*
 *
-*                           Dot Notation         
-*
-*/
-                    console.log(myFirstArray.length-1);
-/*  The length-1 property returns the the LOCATION of the final element, because
+*                       *   
+**  The length - 1 property returns the the LOCATION of the final element, because
 *   the computer's index begins at 0, 1 is subracted to return the indexed location.
-*/                   
-                    console.log(myFirstArray.length);
+*
+*
+*                        *****  Dot Notation  ******   
+*/                   console.log(myFirstArray.length);
+
 //  The .length property gives me the length of an array, just like with Strings!
                                 //-> 4   
 /*
@@ -157,10 +147,7 @@
 *   as well, thats because Arrays are just Objects in disguise.
 *
 *
-*
-*
-*
-* 4. Objects
+*  4. Objects
 *
 *
 *    { }
@@ -250,13 +237,11 @@
 *
 *
 *
-*
-*
-* 5. Function
+* 5. Functions
 *
 *
 *
-* (){}
+*   (){}
 *
 *
 *   Functions are reusable blocks of code that accept inputs, processes them,
@@ -277,7 +262,7 @@
 */
                 function funcName (parameter) {
                          return myObject;
-                                 };
+                }
                 
 /*  Parameters are used just as placeholders for 'Arguments' in functions and
 *   hold no value. Arguments are also optional, and "passed" or given to the
@@ -305,11 +290,10 @@
 *
 *   Functions that contain other functions or return functions are called "First
 *   Class" or "Higher Order" Functions.
-*
-*
-*
-*
-* 6. Undefined
+*/
+
+
+/** 6. Undefined
 *
 *   Undefined is a primitive data type that is automatically assigned to 
 *   variables that have just been declared, but not assigned any value. 
@@ -325,10 +309,27 @@
 *
 *   7. Null
 *
-*    Null is primitive data type that represents the intentional absence of any 
-*    object value, it is not an identifier for a property of the global object,
-*    like undefined can be. "Null" expresses a lack of identification, 
-*    indicating that a variable points to no object.
+*    The value null represents the intentional absence of any value, and 
+*    is also a primitive data type. It is NOT the same as undefined. Something 
+*    that is undefined has been declared but unassigned, however something null 
+*    has had no declaration or initialization and is therefore devoid of any value.
+*
+*/
+                                westeros;
+    /* => ReferenceError: westeros is not defined and has never been initialized
+    with an assignment operator*/
+             //it doesnt return 'null', it just IS null
+
+                
+                              var westeros;
+                //=> 'undefined', it's been declared but is unassigned
+                
+                            var ironThrone = null;
+                     //null CAN be assigned to variables
+                            
+                            console.log(ironThrone);
+                               //=> null
+/*
 *
 *    8. NaN
 *
@@ -336,34 +337,112 @@
 *    returned when Math functions fail, its a property that has a value representing
 *   "Not a Number".
 */
-                        (Math.sqrt(-2)) 
-                        //=> NaN
+                            (Math.sqrt(-2)); 
+                                 //=> NaN
 /*
 *
 *   9. Infinity and -Infinity
 *
-*    Infinity is a numeric value representing the non-writable number infinity.
-*    The value Infinity (positive infinity) is greater than any other number, 
-*    as negative infinity is less than any other number.
-*    Mathematically, this value behaves the same as infinity; 
-*    for example, any positive number multiplied by Infinity equals Infinity,
-*    and any number divided by Infinity equals 0.
+* 
+* 
+*   Infinity is a alpha-numeric value representing the non-writable number:
+*   infinity. Infinity is greater than any other number, and negative infinity 
+*   is less than any other number.
+*   Mathematically, this value behaves the same as infinity would if it were written
+*   (non-writable) numerical form. Inifinity has to be written with a capital 
+*   "I" or it will be read as an undefined variable
+*/ 
+
+                            console.log(Infinity * 2);
+                            //=> Infinity
+                            console.log(Infinity / 2);
+                            //=> Infinity
+                            console.log(Infinity / 0);
+                            //=> NaN
+                            
+                    //Negative Infinity behaves Similarly
+                    
+                            console.log(-Infinity * 2);
+                            //=> -Infinity
+                            console.log(-Infinity * 0);
+                           //=> NaN
+                            console.log(-Infinity / 2);
+                            
+                            //=> -Infinity
+/*
 *
 *
-*
-*
-*    10. Primitive/Simple Data vs. Complex Data
+*    10. Primitive/Simple Data Types vs. Complex Data Types
 *   
-*   Primitive values are passed to a function by copy, meaning their value is 
-*   stored in a variable and when it's reassigned, we use the '=' Assignment
-*   Operator to copy it's value to a new variable
 *
-*    When a reference type value, an object, is copied to another variable 
-*    using =, the address of that value is what’s actually copied over as if it
-*    were a primitive. Objects are copied by reference instead of by value.
-*
-*
-*
+*       Simple Data Types & Copy Value
+*   Numbers / Strings / Booleans / NaN / undefined / null
 *   
+*   Simple (Primitive) data types cannot hold or collect other value types and 
+*   are immutable, meaning they cannot be changed. Variables are in the middle,
+*   Meaning they hold these simple data types,(Numbers, Booleans, Strings, etc)
+*   but unlike complex data types, they are fixed size in memory to be able to 
+*   hold the exact size of the largest possible simple data type, a number that
+*   is 8 bits.
 *
+*
+*  I digress.
+*    
+*   Simple Data Types stored in Variables, and variables stored in Complex Data 
+*   Types are the building blocks of programs. If simple they have 
+*   functions performed on them, they only return *new* values, the old value 
+*   remains unchanged.
+*   
+*/
+
+                            var home = 'Gallifrey';
+                    //holds the Simple Data Type Value of a 'String'
+                           
+                            var sweetHome = 'ZZ6PluralZAlpha';
+                     //the value of home is copied into sweetHome
+                            
+                            var sweetHome = 'Magrathea';
+                                console.log(home);
+             //=> 'Gallifrey', the primitive value of home hasnt changed
+                    
+/*
+*
+*       Complex Data Types & Copy by Reference
+*   Arrays / Objects / Functions
+*   While Simple Data types can only hold a certain amount of data (8 bytes, the
+*   size of a variable), Complex Data Types can be ANY size!
+*
+*/
+                     var doctorWho = {
+                        name: "The Doctor",
+                        age: "10th Life Cycle",
+                        companion: ["Rose", "Donna", "Martha", "Amy"],
+                        contact: function phoneHome(){
+                            return "Call the Doctor!";
+                                }
+                            };
+    //An Object(Complex Data Type) that holds both simple and complex data types
+                            
+                     var tardis = doctorWho;       
+/*          The value now stored in 'tardis' is a reference to the 
+            values stored in 'doctorWho', they now both point to the same 
+            object.   
+*/
+/*  If I were to change any of the values in the new object tardis, they will also
+    reflect in the original object, because both objects reference the same thing.
+*/
+                        tardis.age = 13;
+                        console.log(doctorWho);
+/*                      { name: 'The Doctor',
+                        age: '13',
+                        companion: [ 'Rose', 'Donna', 'Martha', 'Amy' ],
+                        contact: [Function: phoneHome] } 
+
+                        
+*    Because Complex Data Types do not have a fixed size, their values cannot be
+*    stored directly in 8 bytes of memory, so to be able to be stored in
+*    variables, they are stored in variables as a reference. Because they are
+*    stored as a reference to the data type and not the type itself, not only is
+*    the interpreter able to look where to find the value, but Data Types copied
+*    by reference are mutable and can be changed.
 */

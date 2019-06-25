@@ -6,17 +6,15 @@
 *
 *
 *
-*
 ********************************************************************************
 *                             CONTROL FLOW                                     *
 ********************************************************************************                             
 *
 *
 *
-*   Control flow in a program is managed by Conditional Statements, or Switches
-*   and "If-Else If" Chains, that that operate based on boolean values. Conditional
-*   statements use Logical Operators to evaluate unary, binary, and ternary 
-*   values.
+*   Control flow in a program is managed by Conditional Statements that use Logical
+*   Operators, to return boolean (truthy/falsey) values. Control Flow happens through
+*   "If-Else If" Statements and chains, as well as Switch statements.
 *
 *
 *
@@ -30,23 +28,33 @@
 *   evaluates to true. If the first condition is false, the code block returns 
 *   the alternate code located in the "else" portion of the chain. When a block
 *   of code is returned true, the remainder of the chain gets ignored, If-Else If
-*   chains are read and run top to bottom in JavaScript.
+*   chains are read and run top to bottom in JavaScript, and there can be as many
+*   conditions as desired.
 * 
-*/ 
-             //Conditional Statement with Unary Operator
-                if (this condition is true then){
-                        //code block
-                            }
+*                              
+*                            
+*           "If" Statement:
+*/                        if (1 === 1){
+                            console.log(true);
+                                }
+                        //prints true to the console
                             
-                            
-                            or
-                            
-                if(this condition is true){
-                    //run this code
-                    } else {
-                        // the condition is false so run that code
-                            }
-            
+                        
+//          "If Else" Statement:                            
+                if (1 === 'one'){
+                            console.log(true);
+                                } else {
+                                  console.log(false);
+                                }
+                        // prints false to the console
+                        
+                        if (1 === 1){
+                            console.log(true);
+                                } else {
+                                  console.log(false);
+                                }
+                        // prints true to the console
+                                
 /*  Code stops running if the 1st condition evaluates to true. If the first 
 *   condition evaluates to false, the code tests a second condition, this begins 
 *   a chain called:
@@ -54,25 +62,42 @@
 *                           "If - Else If"
 *
 *   1. Else if
-*       "Else if" statements utilize the keywords "else if" and follows the 
-*        initial "If" statement with a second conditional to be checked. There 
+*       "Else if" statements utilize the keywords "else if" and follow the 
+*        initial "If" statement with additonal statements to be checked. There 
 *        will be an "Else If" statment only if the result of
-*        the first conditional statment is false. If the second conditional 
-*        statment evaluates to true, the program will run this block of code.
+*        the first conditional statment is false. If any of the following 
+*        statments evaluate to false, the code will run until it reaches a truthy.
+*        There can be as many "Else If" statements as desired.
 *            
-*/                        
-                         else if (1 === 1){
-                            return 'thats true';
-                        }
+*
+*/                        var house = 'Slytherin';
+                        if (house === 'Gryffindor'){
+                            console.log('Nearly Headless Nick');
+                                } else if (house === 'Ravenclaw'){
+                                    console.log('The Grey Lady');
+                                }   else if (house === 'Hufflepuff'){
+                                  console.log('The Fat Friar');
+                                } else if (house === 'Slytherin'){
+                                    console.log('The Bloody Baron');
+                                }
 /*    
 *   2. Else
-*       If the first two conditional statments are false, the THIRD code block
-*       runs, it is also considered a "default" statement, and is returned only
-*       if all other statements yield a "false" value.
+*       If ALL the statments are false, the final code block runs, it is also 
+*       considered a "default" statement, and is returned only if ALL other 
+*       statements in the chain yield a "false" value.
 *
 */
-                        else    {
-                            return undefined;
+                         var house = 'Hogwarts';
+                        if (house === 'Gryffindor'){
+                            console.log('Nearly Headless Nick');
+                                } else if (house === 'Ravenclaw'){
+                                    console.log('The Grey Lady');
+                                } else if (house === 'Hufflepuff'){
+                                  console.log('The Fat Friar');
+                                } else if (house === 'Slytherin'){
+                                    console.log('The Bloody Baron');
+                                } else {
+                                    console.log('PEEVES!');
                             }
 /*
 *
@@ -97,7 +122,7 @@
                         console.log("that's true too"); 
                         //this block executes and the code stops
                     } else {
-                        console.log('hella false');
+                        console.log('false');
                     }
 
         //Ex. 3         
@@ -107,17 +132,13 @@
                      else if (1 === 'one'){
                         console.log("that's true too");
                     } else {
-                        console.log('hella false');
+                        console.log('false');
                         //this block will execute since both conditions are false
                     }
 /*
 *
 *
-*
-*
-*
-*
-3. Switch
+*   3. Switch
 *
 *
 *
@@ -125,37 +146,38 @@
 *
 *
 *   The Switch method evaluates an input expression, matches the 
-*   expression's value to a case clause, and then executes at statement associated
+*   expression's value to a case clause, and then executes a statement associated
 *   with that case.
 *
-*/
-                        switch(expression) {
-                         case 1:
-                        // code block
-                        break;
-                        case 2:
-                        // code block
-                        break;
-                        default: 
-            //The default keyword tells code to run this if there is no match
-                            }
-
-/*   Switch statements MUST include a break statement using the keyword "break".
+*
+*                        switch(expression) {
+*                         case 1:
+*                        // code block
+*                        break;
+*                        case 2:
+*                        // code block
+*                        break;
+*                        default: 
+*            //The default keyword tells code to run this if there is no match
+*                            }
+*
+*   Switch statements MUST include a break statement using the keyword "break".
 *   Break allows the code to break out of the switch box and move to the next
 *   switch by stopping the execution in that block, similar to a Stop condition
 *   in a loop. If there is no break statement, the next block of code will execute
 *   whether or not it matches the value of the input expression.
+*
 */
-
-        switch(color){
+            var color = "fuschia";
+            switch(color){
             case "magenta":
                 console.log("The color Is magenta");
                 break;
             case "fuschia":
-                console.log("The color is fuschia")
+                console.log("The color is fuschia");
                 break;
             case "obsidian":
-                console.log("The color is obsidian")
+                console.log("The color is obsidian");
                     break;
             default:
             console.log("We have all these cool colors and you choose that?");
@@ -174,10 +196,10 @@
                 console.log("The color Is magenta");
                 break;
             case "fuschia":
-                console.log("The color is fuschia")
+                console.log("The color is fuschia");
                 break;
             case "obsidian":
-                console.log("The color is obsidian")
+                console.log("The color is obsidian");
                     }
 /*
 *

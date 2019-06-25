@@ -124,7 +124,7 @@ function printObjectValuesInReverse(object) {
    for(var key in object){
    myArr.unshift(object[key]);
    }
-   for (var i = 0; i < myArr.length; i++){
+   for (var i = 0; i < myArr.length ; i++){
     console.log(myArr[i]);
    } 
    
